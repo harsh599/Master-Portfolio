@@ -2,11 +2,14 @@
     <div class="intro-video lg:w-1/2 p-6">
         <video width="560" height="315" controls>
             <source [src]="video_url" type="video/mp4">
-            Your browser does not support the video tag.
+                Your browser does not support the video tag.
         </video>
     </div>
     <div class="intro-content lg:w-1/2 p-6">
-        <h1>Hii I am Harsh.</h1>
+        <div class="typing-container" >
+            <h1>Hii I am Harsh <p><span [@typingAnimation]="animationState">{{ typedText }}</span></p>
+            </h1>
+        </div>
         <p>Enthusiastic software engineer with 4 years of hands-on experience in frontend development, I
             excel at transforming intricate concepts into impactful applications. My passion for innovation, adept
             problem-solving skills, and proven track record of delivering tangible results set me apart. I'm eager to

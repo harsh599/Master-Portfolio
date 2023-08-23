@@ -9,8 +9,16 @@ import { EducationDetailsComponent } from './education-details/education-details
 
 const routes: Routes = [
   { path: '', redirectTo: 'intro', pathMatch: 'full' },
-  { path: 'intro', component: QuickIntroComponent },
-  { path: 'education-details', component: EducationDetailsComponent },
+  {
+    path: 'intro',
+    component: QuickIntroComponent,
+    data: { animation: 'HomePage' },
+  },
+  {
+    path: 'education-details',
+    component: EducationDetailsComponent,
+    data: { animation: 'AboutPage' },
+  },
   { path: 'work-experience', component: WorkExperienceComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'skills', component: SkillsComponent },

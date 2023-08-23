@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChildrenOutletContexts, Router } from '@angular/router';
+import { slideInAnimation } from './animations';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [slideInAnimation],
 })
 export class AppComponent {
   title = 'master-portfolio';
@@ -18,7 +20,10 @@ export class AppComponent {
   ];
   activeIndex: number | null = 0;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private contexts: ChildrenOutletContexts
+  ) {}
 
   onSliderChange(event: Event) {
     const sliderValue = (event.target as HTMLInputElement).value;
@@ -41,5 +46,11 @@ export class AppComponent {
     } else {
       this.router.navigate(['/home']);
     }
+  }
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
   }
 }
