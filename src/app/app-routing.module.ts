@@ -12,17 +12,33 @@ const routes: Routes = [
   {
     path: 'intro',
     component: QuickIntroComponent,
-    data: { animation: 'HomePage' },
+    data: { animation: 'IntroPage' },
   },
   {
     path: 'education-details',
     component: EducationDetailsComponent,
-    data: { animation: 'AboutPage' },
+    data: { animation: 'EducationPage' },
   },
-  { path: 'work-experience', component: WorkExperienceComponent },
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: ProjectsComponent },
+  {
+    path: 'skills',
+    component: SkillsComponent,
+    data: { animation: 'SkillsPage' },
+  },
+  {
+    path: 'employment-details',
+    component: WorkExperienceComponent,
+    data: { animation: 'ExperiencePage' },
+  },
+  {
+    path: 'project-details',
+    component: ProjectsComponent,
+    data: { animation: 'ProjectsPage' },
+  },
+  {
+    path: 'about-me',
+    component: AboutMeComponent,
+    data: { animation: 'AboutMePage' },
+  },
 ];
 
 @NgModule({

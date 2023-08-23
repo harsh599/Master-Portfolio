@@ -7,3 +7,23 @@
 .typing-container p {
     display: inline-block;
 }
+
+
+.typing-container p span {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.typing-animation {
+    animation: typing 4s infinite;
+    /* Adjust duration as needed */
+}

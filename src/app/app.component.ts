@@ -10,14 +10,15 @@ import { slideInAnimation } from './animations';
 export class AppComponent {
   title = 'master-portfolio';
   timelinePoints = [
-    { content: 'Point 1 Content' },
-    { content: 'Point 2 Content' },
-    { content: 'Point 3 Content' },
-    { content: 'Point 4 Content' },
-    { content: 'Point 5 Content' },
-    { content: 'Point 6 Content' },
-    { content: 'Point 7 Content' },
+    { content: 'About Me' },
+    { content: 'Education' },
+    { content: 'Expertise' },
+    { content: 'Experience' },
+    { content: 'Portfolio' },
+    { content: 'Volunteer Work' },
+    { content: 'Skills' },
   ];
+
   activeIndex: number | null = 0;
 
   constructor(
@@ -44,7 +45,7 @@ export class AppComponent {
     } else if (this.activeIndex == 6) {
       this.router.navigate(['/volunteering']);
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home']); // error 404 page
     }
   }
 

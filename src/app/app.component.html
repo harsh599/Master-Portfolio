@@ -1,5 +1,5 @@
 <div>
-  <div class="bg-white shadow-md rounded-lg p-6 m-2 " [@routeAnimations]="getRouteAnimationData()">
+  <div class="bg-white shadow-md rounded-lg p-6 m-2 content-height" [@routeAnimations]="getRouteAnimationData()">
     <router-outlet></router-outlet>
   </div>
   <div class="slider-timeline">
@@ -7,6 +7,7 @@
       (change)="onSliderChange($event)">
     <div class="timeline">
       <div class="timeline-point" *ngFor="let point of timelinePoints; let i = index" [class.active]="i === activeIndex">
+        <p class = "w-36">{{point.content}}</p>
       </div>
     </div>
   </div>
