@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { ChildrenOutletContexts, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {
+  ActivatedRoute,
+  ChildrenOutletContexts,
+  Router,
+} from '@angular/router';
 import { slideInAnimation } from './animations';
 @Component({
   selector: 'app-root',
@@ -7,7 +11,7 @@ import { slideInAnimation } from './animations';
   styleUrls: ['./app.component.scss'],
   animations: [slideInAnimation],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'master-portfolio';
   timelinePoints = [
     { content: 'About Me' },
@@ -26,13 +30,18 @@ export class AppComponent {
     private contexts: ChildrenOutletContexts
   ) {}
 
+  ngOnInit() {
+    this.router.navigate(['/intro']);
+  }
+
   onSliderChange(event: Event) {
     const sliderValue = (event.target as HTMLInputElement).value;
     this.activeIndex = +sliderValue;
     console.log(this.activeIndex);
     if (this.activeIndex == 0) {
-      this.router.navigate(['/intro']);
+      this.router.navigate(['/intro']); // these paths change from root i.e / so they are absolute path i.e /new-path
     } else if (this.activeIndex == 1) {
+      // relative paths are the one's which are extension to current path /app1/new-path
       this.router.navigate(['/education-details']);
     } else if (this.activeIndex == 2) {
       this.router.navigate(['/skills']);

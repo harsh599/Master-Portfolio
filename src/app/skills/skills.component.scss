@@ -1,0 +1,62 @@
+/* Styles for your Hall of Fame section */
+.hall-of-fame {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.skill-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-icons {
+    display: flex;
+    /* Make icons horizontally aligned */
+    justify-content: center;
+    /* Center icons horizontally */
+    align-items: center;
+    /* Center icons vertically */
+    margin-bottom: 10px;
+}
+
+.skill-icon {
+    margin: 0 10px;
+    /* Add spacing between icons */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+.skill-name {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.skill-description {
+    color: #666;
+}

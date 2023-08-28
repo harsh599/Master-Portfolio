@@ -11,6 +11,7 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { FormsModule } from '@angular/forms';
 import { EducationDetailsComponent } from './education-details/education-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EducationDetailsComponent } from './education-details/education-details
     WorkExperienceComponent,
     ProjectsComponent,
     EducationDetailsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

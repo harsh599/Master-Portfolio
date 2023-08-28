@@ -8,6 +8,7 @@ import {
   trigger,
 } from '@angular/animations';
 
+//test
 export const slideInAnimation = trigger('routeAnimations', [
   transition('IntroPage <=> EducationPage', [
     style({ position: 'relative' }),

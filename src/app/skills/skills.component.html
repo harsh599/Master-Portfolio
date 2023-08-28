@@ -1,1 +1,16 @@
-<p>skills works!</p>
+<section class="hall-of-fame">
+    <div class="container">
+        <h2 class="section-title">Hall of Fame - Skills</h2>
+        <div class="skill-cards">
+            <div *ngFor="let skill of skills" class="skill-card">
+                <div class="skill-icons">
+                    <div *ngFor="let icon of skill.icons" class="skill-icon">
+                        <img [src]="icon" alt="{{ skill.name }}" class="icon">
+                    </div>
+                </div>
+                <h3 class="skill-name">{{ skill.name }}</h3>
+                <p class="skill-description">{{ skill.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
